@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BookingApplication</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="cssfiles/bookingpage.css">
+    </head>
+    <body>
+        <div class="w3-container navcontainer">
+            <div class="heading">CODINGMART MOVIES</div>
+        </div>
+        <div id="selecttext">SELECT YOUR SEATS</div>
+        <div class="arrange">
+ 
+            <div style="white-space: nowrap; margin-top: 10px;">
+                <span class="seat">A</span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat1" onclick="seats(this.id)">1</span></a>
+                </span>
+                
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat2" onclick="seats(this.id)">2</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat3" onclick="seats(this.id)">3</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat4" onclick="seats(this.id)">4</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat5" onclick="seats(this.id)">5</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat6" onclick="seats(this.id)">6</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat7" onclick="seats(this.id)">7</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat8" onclick="seats(this.id)">8</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat9" onclick="seats(this.id)">9</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat10" onclick="seats(this.id)">10</span></a>
+                </span>
+
+                <span class="fa-stack" style="margin-left: 40px;">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat11" onclick="seats(this.id)">11</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat12" onclick="seats(this.id)">12</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat13" onclick="seats(this.id)">13</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat14" onclick="seats(this.id)">14</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat15" onclick="seats(this.id)">15</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat16" onclick="seats(this.id)">16</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat17" onclick="seats(this.id)">17</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat18" onclick="seats(this.id)">18</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat19" onclick="seats(this.id)">19</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat20" onclick="seats(this.id)">20</span></a>
+                </span>
+                
+                
+            </div>
+            <div style="white-space: nowrap; margin-top: 10px;">
+                <span class="seat">B</span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat21" onclick="seats(this.id)">21</span></a>
+                </span>
+                
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat22" onclick="seats(this.id)">22</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat23" onclick="seats(this.id)">23</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat24" onclick="seats(this.id)">24</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat25" onclick="seats(this.id)">25</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat26" onclick="seats(this.id)">26</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat27" onclick="seats(this.id)">27</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat28" onclick="seats(this.id)">28</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat29" onclick="seats(this.id)">29</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat30" onclick="seats(this.id)">30</span></a>
+                </span>
+
+                <span class="fa-stack" style="margin-left: 40px;">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat31" onclick="seats(this.id)">31</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat32" onclick="seats(this.id)">32</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat33" onclick="seats(this.id)">33</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat34" onclick="seats(this.id)">34</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat35" onclick="seats(this.id)">35</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat36" onclick="seats(this.id)">36</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat37" onclick="seats(this.id)">37</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat38" onclick="seats(this.id)">38</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat39" onclick="seats(this.id)">39</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat40" onclick="seats(this.id)">40</span></a>
+                </span>
+                
+                
+            </div>
+            <div style="white-space: nowrap; margin-top: 10px;">
+                <span class="seat">C</span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat41" onclick="seats(this.id)">41</span></a>
+                </span>
+                
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat42" onclick="seats(this.id)">42</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat43" onclick="seats(this.id)">43</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat44" onclick="seats(this.id)">44</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat45" onclick="seats(this.id)">45</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat46" onclick="seats(this.id)">46</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat47" onclick="seats(this.id)">47</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat48" onclick="seats(this.id)">48</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat49" onclick="seats(this.id)">49</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat50" onclick="seats(this.id)">50</span></a>
+                </span>
+
+                <span class="fa-stack" style="margin-left: 40px;">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat51" onclick="seats(this.id)">51</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat52" onclick="seats(this.id)">52</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat53" onclick="seats(this.id)">53</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat54" onclick="seats(this.id)">54</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat55" onclick="seats(this.id)">55</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat56" onclick="seats(this.id)">56</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat57" onclick="seats(this.id)">57</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat58" onclick="seats(this.id)">59</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat59" onclick="seats(this.id)">58</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat60" onclick="seats(this.id)">60</span></a>
+                </span>
+                
+                
+            </div>
+            <div style="white-space: nowrap; margin-top: 10px;">
+                <span class="seat">D</span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat61" onclick="seats(this.id)">61</span></a>
+                </span>
+                
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat62" onclick="seats(this.id)">62</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat63" onclick="seats(this.id)">63</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat64" onclick="seats(this.id)">64</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat65" onclick="seats(this.id)">65</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat66" onclick="seats(this.id)">66</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat67" onclick="seats(this.id)">67</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat68" onclick="seats(this.id)">68</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat69" onclick="seats(this.id)">69</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat70" onclick="seats(this.id)">70</span></a>
+                </span>
+
+                <span class="fa-stack" style="margin-left: 40px;">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat71" onclick="seats(this.id)">71</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat72" onclick="seats(this.id)">72</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat73" onclick="seats(this.id)">73</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat74" onclick="seats(this.id)">74</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat75" onclick="seats(this.id)">75</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat76" onclick="seats(this.id)">76</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat77" onclick="seats(this.id)">77</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat78" onclick="seats(this.id)">78</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat79" onclick="seats(this.id)">79</span></a>
+                </span>
+                <span class="fa-stack">
+                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                    <a><span class="fa-stack-1x" style="font-size: 10px;" id="seat80" onclick="seats(this.id)">80</span></a>
+                </span>
+                
+                
+            </div>
+        </div>
+
+        <form method="POST" action="seatsb">
+            <input type="text" name="seatsid" id="cine" size="1"/>
+
+            <div id="submit"><input type="submit"></div>
+
+        </form>
+        <script>
+                    for(var item in alldata){ 
+            document.getElementById(alldata[item].seat).style.color="white";
+        }
+        </script>
+        <script>
+            var seatbooked=[];
+            function seats(clickid)
+            {
+                seatbooked.push(clickid);
+                document.getElementById(clickid).style.color = "white";
+                document.getElementById("cine").value=seatbooked.toString();
+
+                
+            }
+
+
+
+        </script>
+    </body>
+
+</html>

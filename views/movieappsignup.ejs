@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>SIGN UP</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="cssfiles/movieappsignup.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+    <body>
+        <div class="w3-container signuppage w3-card-4">
+            <div class="loginheading">CODINGMART MOVIES</div>
+            <div class="logintext">SIGN UP</div>
+            <div class="imageicon"><img src="assets/googleicon.jpg" width="40px" height="20px" style="vertical-align: middle;"><span class="icontext">Continue with Google</span></div>
+            <div class="imageicon"><img src="assets/facebookicon.png" width="35px" height="20px" style="vertical-align: middle;"><span class="icontext">Continue with Facebook</span></div>
+            <div class="imageicon"><img src="assets/appleicon.png" width="40px" height="20px" style="vertical-align: middle;"><span class="icontext">Continue with Apple</span></div>
+            <form action="/usercredentials" method="POST">
+                <div class="loginvalues">Email</div>
+                    <input type="email" size="40" name="username" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required> 
+                <div class="loginvalues">Password</div>
+                    <input type="password" size="40" name="userpassword" required>
+                <div class="loginsubmit"><input type="submit" value="SIGN UP"></div>
+                    <input type="checkbox" id="keepmeloged" name="autologin" value="log">
+                    <label for="autologin">Keep me Logged in</label><br>
+                <div class="forgot"><a href="#" >Forgot your password</a></div>
+
+
+
+
+
+
+            </form>
+            <div class="signup">Already have an account <a href="movieapplogin">LOGIN</a></div>
+
+
+        </div>
+    </body>
+</html>

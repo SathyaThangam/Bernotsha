@@ -1,0 +1,98 @@
+.loginpage{
+    margin: 0 auto;
+    width: 500px;
+    background: white;
+    margin-top: 40px;
+}
+.loginpage .loginheading{
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: rgba(11, 85, 134, 0.705);
+    font-size: 20px;
+}
+.loginpage .logintext{
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #db4460;
+    padding: 20px;
+}
+.loginpage .imageicon{
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+body{
+    background: #f5f6f7;
+}
+form{
+    padding: 20px;
+    margin-top: 20px;
+}
+.loginpage .loginvalues{
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+input[type=email]
+{
+    margin-top: 5px;
+    padding: 5px;
+    outline: none;
+}
+input[type=password]
+{
+    margin-top: 5px;
+    padding: 5px;
+    outline: none;
+}
+input[type=submit]
+{
+    border: none;
+    padding: 10px 100px;
+    background-color: rgba(11, 85, 134, 0.486);
+    color: white;
+    font-weight: bold;
+    outline: none;
+}
+input[type=checkbox]
+{
+    margin-top: 20px;
+}
+.loginpage .loginsubmit{
+    text-align: center;
+    background-color:white;
+    color: white;
+    margin-right: 5px;
+    margin-top: 40px;
+}
+.loginpage .signup{
+    text-align: center;
+    padding: 20px;
+}
+.loginpage .forgot{
+    margin-top: 20px;
+}
+.loginpage .forgot a{
+    text-decoration: none;
+}
+.loginpage .signup a {
+    text-decoration: none;
+}
+.loginpage .invalid{
+    text-align: center;
+    margin-top: 20px;
+    color: #db4460;
+}
+.imageicon:hover{
+    background-color: whitesmoke;
+}
+.imageicon{
+    padding: 10px;
+}
+@media only screen and (max-width: 600px) {
+    .loginpage{
+        width: 450px;
+    }
+}

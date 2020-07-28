@@ -1,0 +1,52 @@
+.navcontainer{
+    background-color: rgba(11, 85, 134, 0.705);
+    height: 70px;
+    padding-right: 50px;
+}
+
+    .navcontainer .heading{
+        font-size: 22px;
+        color: white;
+        text-align: center;
+        justify-content: center;
+        vertical-align: middle;
+        margin-top: 20px;
+    
+    }
+    #selecttext{
+        margin-top: 50px;
+        text-align: center;
+        font-size: 20px;
+    }
+    .seatnumbers{
+        font-size: 10px;
+    }
+    .seat{
+        margin-right: 13px;
+    }
+    .arrange{
+        width: 800px;
+        margin: 0 auto;
+        margin-top: 120px;
+    }
+    #confirm{
+        padding: 15px;
+        background: blue;
+        color: white;
+        border: none;
+        outline: none;
+        text-decoration: none;
+        
+    }
+    #submit{
+        text-align: center;
+    }
+    input[type=submit]{
+        padding: 4px;
+        background: rgb(236, 122, 122);
+        opacity: 0.8;
+        border: none;
+        outline: none;
+        color: white;
+        margin-top: 30px;
+    }
