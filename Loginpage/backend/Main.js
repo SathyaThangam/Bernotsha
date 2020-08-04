@@ -28,7 +28,7 @@ const sessionStore = new MySQLStore({
     endConnectionOnClose: false
 },db);
 app.use(session({
-    key: 'fsfsfsfssff',
+    key: 'fsfsfsfsff',
     secret: 'adfsdfsfds',
     store: sessionStore,
     resave: false,
