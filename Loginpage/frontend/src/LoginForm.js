@@ -2,8 +2,11 @@ import React        from 'react';
 import InputField   from './InputField';
 import SubmitButton from './SubmitButton';
 import UserStore    from './stores/UserStore';
+import {toast}      from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import TextView from './TextView';
 
-
+toast.configure()
 class LoginForm extends React.Component {
 
   constructor(props){
@@ -12,7 +15,8 @@ class LoginForm extends React.Component {
       username:'',
       password:'',
       cpassword:'',
-      buttonDisabled: false
+      buttonDisabled: false,
+      required:''
     }
   }
 
@@ -31,9 +35,10 @@ class LoginForm extends React.Component {
       username:'',
       password:'',
       cpassword:'',
-      buttonDisabled: false
+      buttonDisabled: false,
     })
   }
+
 
   async doSign()
   {
@@ -44,23 +49,24 @@ class LoginForm extends React.Component {
 
 
   async doLogin(){
-    if(!this.state.username){
+    if(!this.state.username && !this.state.password && !this.state.cpassword){
+      this.setState({
+        required:"* ALL FIELDS ARE REQUIRED"
+      })
+      toast.error('ALL FIELDS ARE REQUIRED',{position: toast.POSITION.TOP_CENTER})
       return;
     }
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.username)==false)
     {
-      alert("Enter valid email address");
-      this.resetForm();
+      toast.info('ENTER VALID EMAIL ADDRESS',{position: toast.POSITION.TOP_CENTER})
       return;
 
     }
 
-    if(!this.state.password){
-      return;
-    }
+
     if(this.state.password!=this.state.cpassword)
     {
-      alert("Password do not match");
+      toast.error("PASSWORDS DO NOT MATCH",{position: toast.POSITION.TOP_CENTER})
       this.resetForm();
       return;
     }
@@ -86,7 +92,7 @@ class LoginForm extends React.Component {
       }
       else if(result && result.success === false){
         this.resetForm();
-        alert(result.msg);
+        toast.error(result.msg,{position: toast.POSITION.TOP_CENTER})
       }
     }
     catch(e){
@@ -98,40 +104,74 @@ class LoginForm extends React.Component {
   render(){
   return (
     <div className="loginForm">
+      <TextView
+        text='CODINGMART'
+        disabled='true'
+        className='heading'
+      />
       
-      Log in
+
+      <TextView
+        text='E-MAIL'
+        disabled='true'
+        className='userfield'
+      />      
       <InputField
         type='email'
         placeholder='email'
         value={this.state.username ? this.state.username : ''}
         onChange={ (val) => this.setInputValue('username',val) }
       />
+      <TextView
+        text={this.state.required}
+        disabled='true'
+        className='requiredText'
+      />  
+      <TextView
+        text='PASSWORD'
+        disabled='true'
+        className='userfield'
+      />         
       <InputField
         type='password'
         placeholder='Password'
         value={this.state.password ? this.state.password : ''}
         onChange={ (val) => this.setInputValue('password',val) }
       />
+      <TextView
+        text={this.state.required}
+        className='requiredText'
+      />       
+      <TextView
+        text='CONFIRM PASSWORD'
+        className='userfield'
+      />        
       <InputField
         type='password'
         placeholder='Confirm Password'
         value={this.state.cpassword ? this.state.cpassword : ''}
         onChange={ (val) => this.setInputValue('cpassword',val) }
       />
+      <TextView
+        text={this.state.required}
+        disabled='true'
+        className='requiredText'
+      />  
 
       <SubmitButton
-        text='Login'
+        text='LOGIN'
         disabled={this.state.buttonDisabled}
         onClick={ () => this.doLogin()}
       />
       <SubmitButton
-        text='Signup'
+        text='SIGNUP'
         disabled={this.state.buttonDisabled}
         onClick={()=>this.doSign()}
       />
     </div>
   );
 }
+
 }
 
 export default LoginForm;

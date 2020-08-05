@@ -2,8 +2,11 @@ import React        from 'react';
 import InputField   from './InputField';
 import SubmitButton from './SubmitButton';
 import UserStore    from './stores/UserStore';
+import TextView     from './TextView'
+import {toast}      from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
-
+toast.configure()
 class SignupForm extends React.Component {
 
   constructor(props){
@@ -50,22 +53,25 @@ class SignupForm extends React.Component {
     }
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.sname)==false)
     {
-      alert("Enter valid email address");
+      toast.error("ENTER VALID EMAIL ADDRESS",{position: toast.POSITION.TOP_CENTER})
       return;
 
     }
     if(!this.state.spassword){
+      toast.error("* ALL FIELDS ARE REQUIRED",{position: toast.POSITION.TOP_CENTER})
       return;
     }
     if(!this.state.smobile){
+      toast.error("* ALL FIELDS ARE REQUIRED",{position: toast.POSITION.TOP_CENTER})
       return;
     }
     if(!this.state.scpassword){
+      toast.error("* ALL FIELDS ARE REQUIRED",{position: toast.POSITION.TOP_CENTER})
       return;
     }
     if(this.state.spassword != this.state.scpassword)
     {
-      alert("PASSWORD DO NOT MATCH");
+      toast.error("* PASSWORD DO NOT MATCH",{position: toast.POSITION.TOP_CENTER})
       this.resetForm();
       return;
     }
@@ -95,7 +101,7 @@ class SignupForm extends React.Component {
       else if(result && result.success === false){
         this.resetForm();
         this.login();
-        alert(result.msg);
+        toast.success("SUCCESSFULLY REGISTERED",{position: toast.POSITION.TOP_CENTER})
       }
     }
     catch(e){
@@ -108,25 +114,51 @@ class SignupForm extends React.Component {
   return (
     <div className="loginForm">
       
-      SIGN IN
+      <TextView
+        text='CODINGMART'
+        disabled='false'
+        className='heading'
+      />
+      
+
+      <TextView
+        text='E-MAIL'
+        disabled='false'
+        className='userfield'
+      /> 
       <InputField
         type='email'
         placeholder='email'
         value={this.state.sname ? this.state.sname : ''}
         onChange={ (val) => this.setInputValue('sname',val) }
       />
+      <TextView
+        text='MOBILE'
+        disabled='false'
+        className='userfield'
+      /> 
       <InputField
         type='text'
         placeholder='Mobile'
         value={this.state.smobile ? this.state.smobile : ''}
         onChange={ (val) => this.setInputValue('smobile',val) }
       />
+      <TextView
+        text='PASSWORD'
+        disabled='false'
+        className='userfield'
+      /> 
       <InputField
         type='password'
         placeholder='Password'
         value={this.state.spassword ? this.state.spassword : ''}
         onChange={ (val) => this.setInputValue('spassword',val) }
       />
+      <TextView
+        text='CONFIRM PASSWORD'
+        disabled='false'
+        className='userfield'
+      /> 
      <InputField
         type='password'
         placeholder='Confirm Password'
@@ -136,10 +168,15 @@ class SignupForm extends React.Component {
 
 
       <SubmitButton
-        text='Login'
+        text='BACK TO LOGIN'
+        disabled={this.state.buttonDisabled}
+        onClick={ () => this.login()}
+      />
+      <SubmitButton
+        text='SIGNUP'
         disabled={this.state.buttonDisabled}
         onClick={ () => this.doSign()}
-      />
+      />      
 
     </div>
   );
