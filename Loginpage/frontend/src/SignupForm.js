@@ -36,6 +36,10 @@ class SignupForm extends React.Component {
       spassword:'',
       smobile:'',
       scpassword:'',
+      requiredemail:'',
+      requiredpassword:'',
+      requiredmobile:'',
+      requiredconfirmpassword:'',
       buttonDisabled: false
     })
   }
@@ -49,26 +53,56 @@ class SignupForm extends React.Component {
 
   async doSign(){
     if(!this.state.sname){
+      this.setState({
+        requiredemail:'* E-MAIL ID IS REQUIRED'
+      })
+      toast.error("E-MAIL ID IS REQUIRED",{position: toast.POSITION.TOP_CENTER})
       return;
     }
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.sname)==false)
     {
+      this.setState({
+        requiredemail:'ENTER VALID EMAIL ADDRESS'
+      })
       toast.error("ENTER VALID EMAIL ADDRESS",{position: toast.POSITION.TOP_CENTER})
       return;
 
     }
-    if(!this.state.spassword){
-      toast.error("* ALL FIELDS ARE REQUIRED",{position: toast.POSITION.TOP_CENTER})
+    if(!this.state.smobile){
+      this.setState({
+        requiredmobile:'* MOBILE NUMBER IS REQUIRED',
+        requiredemail:''
+      })
+      toast.error("PASSWORD IS REQUIRED",{position: toast.POSITION.TOP_CENTER})
       return;
     }
-    if(!this.state.smobile){
-      toast.error("* ALL FIELDS ARE REQUIRED",{position: toast.POSITION.TOP_CENTER})
+    if(!this.state.spassword){
+      this.setState({
+        requiredpassword:'* PASSWORD IS REQUIRED',
+        requiredmobile:''
+      })
+      toast.error("PASSWORD IS REQUIRED",{position: toast.POSITION.TOP_CENTER})
+      return;
+    }
+    if(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/.test(this.state.spassword)==false)
+    {
+      this.setState({
+        requiredpassword:"PASSWORD PATTERN DO NOT MATCH"
+      })
+      toast.error('PASSWORD PATTERN DO NOT MATCH',{position: toast.POSITION.TOP_CENTER})
       return;
     }
     if(!this.state.scpassword){
-      toast.error("* ALL FIELDS ARE REQUIRED",{position: toast.POSITION.TOP_CENTER})
+      this.setState({
+        requiredconfirmpassword:'*CONFIRM PASSWORD IS REQUIRED',
+        requiredpassword:''
+      })
+      toast.error("ALL FIELDS ARE REQUIRED",{position: toast.POSITION.TOP_CENTER})
       return;
     }
+
+
+
     if(this.state.spassword != this.state.scpassword)
     {
       toast.error("* PASSWORD DO NOT MATCH",{position: toast.POSITION.TOP_CENTER})
@@ -133,6 +167,11 @@ class SignupForm extends React.Component {
         onChange={ (val) => this.setInputValue('sname',val) }
       />
       <TextView
+        text={this.state.requiredemail}
+        disabled='true'
+        className='requiredText'
+      />       
+      <TextView
         text='MOBILE'
         disabled='false'
         className='userfield'
@@ -143,6 +182,11 @@ class SignupForm extends React.Component {
         value={this.state.smobile ? this.state.smobile : ''}
         onChange={ (val) => this.setInputValue('smobile',val) }
       />
+      <TextView
+        text={this.state.requiredmobile}
+        disabled='true'
+        className='requiredText'
+      /> 
       <TextView
         text='PASSWORD'
         disabled='false'
@@ -155,6 +199,11 @@ class SignupForm extends React.Component {
         onChange={ (val) => this.setInputValue('spassword',val) }
       />
       <TextView
+        text={this.state.requiredpassword}
+        disabled='true'
+        className='requiredText'
+      /> 
+      <TextView
         text='CONFIRM PASSWORD'
         disabled='false'
         className='userfield'
@@ -165,6 +214,11 @@ class SignupForm extends React.Component {
         value={this.state.scpassword ? this.state.scpassword : ''}
         onChange={ (val) => this.setInputValue('scpassword',val) }
       />
+      <TextView
+        text={this.state.requiredconfirmpassword}
+        disabled='true'
+        className='requiredText'
+      /> 
 
 
       <SubmitButton

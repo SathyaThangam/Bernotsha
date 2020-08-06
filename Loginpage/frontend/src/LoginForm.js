@@ -14,9 +14,9 @@ class LoginForm extends React.Component {
     this.state={
       username:'',
       password:'',
-      cpassword:'',
       buttonDisabled: false,
-      required:''
+      requiredemail:'',
+      requiredpassword:''
     }
   }
 
@@ -34,7 +34,6 @@ class LoginForm extends React.Component {
     this.setState({
       username:'',
       password:'',
-      cpassword:'',
       buttonDisabled: false,
     })
   }
@@ -49,9 +48,9 @@ class LoginForm extends React.Component {
 
 
   async doLogin(){
-    if(!this.state.username && !this.state.password && !this.state.cpassword){
+    if(!this.state.username){
       this.setState({
-        required:"* ALL FIELDS ARE REQUIRED"
+        requiredemail:"* E-MAIL ID IS REQUIRED",
       })
       toast.error('ALL FIELDS ARE REQUIRED',{position: toast.POSITION.TOP_CENTER})
       return;
@@ -59,17 +58,32 @@ class LoginForm extends React.Component {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.username)==false)
     {
       toast.info('ENTER VALID EMAIL ADDRESS',{position: toast.POSITION.TOP_CENTER})
+      this.setState({
+        requiredemail:"ENTER VALID EMAIL ADDRESS"
+      })
       return;
 
     }
 
+    if(!this.state.password){
+      this.setState({
+        requiredpassword:"* PASSWORD IS REQUIRED",
+        requiredemail:""
+      })
+      toast.error('ALL FIELDS ARE REQUIRED',{position: toast.POSITION.TOP_CENTER})
+      return;
+    }
 
-    if(this.state.password!=this.state.cpassword)
+    if(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/.test(this.state.password)==false)
     {
-      toast.error("PASSWORDS DO NOT MATCH",{position: toast.POSITION.TOP_CENTER})
-      this.resetForm();
+      this.setState({
+        requiredpassword:"NEED EXPECTED PATTERN"
+      })
+      toast.error('EXPECTED PATTERN NOT MATCHED',{position: toast.POSITION.TOP_CENTER})
       return;
     }
+    
+
     this.setState({
       buttonDisabled:true
     })
@@ -123,7 +137,7 @@ class LoginForm extends React.Component {
         onChange={ (val) => this.setInputValue('username',val) }
       />
       <TextView
-        text={this.state.required}
+        text={this.state.requiredemail}
         disabled='true'
         className='requiredText'
       />  
@@ -139,24 +153,10 @@ class LoginForm extends React.Component {
         onChange={ (val) => this.setInputValue('password',val) }
       />
       <TextView
-        text={this.state.required}
+        text={this.state.requiredpassword}
         className='requiredText'
       />       
-      <TextView
-        text='CONFIRM PASSWORD'
-        className='userfield'
-      />        
-      <InputField
-        type='password'
-        placeholder='Confirm Password'
-        value={this.state.cpassword ? this.state.cpassword : ''}
-        onChange={ (val) => this.setInputValue('cpassword',val) }
-      />
-      <TextView
-        text={this.state.required}
-        disabled='true'
-        className='requiredText'
-      />  
+      
 
       <SubmitButton
         text='LOGIN'
