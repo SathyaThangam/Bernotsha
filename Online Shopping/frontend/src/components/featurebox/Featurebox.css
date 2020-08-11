@@ -1,0 +1,35 @@
+.feature_box{
+	margin-bottom:20px;	
+}
+.feature_box h4{
+	margin:0 0 10px 0;
+	font-weight:normal;	
+}
+.feature_box img{	
+	margin-bottom:10px;
+	background-color:#eb4800;
+	padding:25px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;	
+	border-radius: 50%;
+}
+.feature_box .service{	
+	margin-top:3px;
+	padding:3px;	
+	text-align:center;
+}
+.feature_box .service:hover{
+	background-color:#f4f4f4;
+}
+.feature_box .service:hover img{
+	-webkit-transition: all 0.7s linear;
+	-webkit-transform: rotate(6.28rad);
+	transition: all 0.7s;
+	transform: rorate(6.28rad);
+}
+.feature_box .service div{	
+	padding:5px 5px 0 5px;
+}
+.span4 {
+    width: 380px;
+  }

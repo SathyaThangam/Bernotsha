@@ -1,0 +1,26 @@
+.span2 {
+    width: 190px;
+  }
+
+h4.title.m{
+	margin-top:15px;	
+	overflow:hidden;
+	width:100%;
+}
+h4.title strong{
+	color:#eb4800;
+}
+h4.title span.text{
+	background-color:#fff;
+	padding-right:10px;
+}
+
+
+
+
+.our_client{
+	margin-top:20px;
+}
+.our_client .row{
+	text-align:center;
+}
